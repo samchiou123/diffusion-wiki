@@ -1,0 +1,8 @@
+LIMIT: metadata-only public package check; raw PDF presence and SHA-256 NOT verified
+Ingested distinct sources: 5/5
+Checked local links: 158; claim references: 166
+FAIL: Broken local link in wiki/sources/improved-ddpm.md: ../../raw/improved-ddpm-v1.pdf
+FAIL: Broken local link in wiki/sources/understanding-diffusion.md: ../../raw/understanding-diffusion-v1.pdf
+FAIL: Broken local link in wiki/sources/ddim.md: ../../raw/ddim-v4.pdf
+FAIL: Broken local link in wiki/sources/ddpm.md: ../../raw/ddpm-v2.pdf
+FAIL: Broken local link in wiki/sources/latent-diffusion.md: ../../raw/latent-diffusion-v2.pdf

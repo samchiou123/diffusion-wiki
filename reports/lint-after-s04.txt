@@ -1,0 +1,6 @@
+Ingested distinct sources: 4/5
+Checked local links: 74; claim references: 45
+PASS: structural checks; semantic fidelity not evaluated by this script
+PENDING: complete remaining ingests before making the teaching deck
+
+exit_code=0

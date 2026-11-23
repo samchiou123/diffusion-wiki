@@ -1,0 +1,14 @@
+$ python3 scripts/lint_wiki.py
+Ingested distinct sources: 1/5
+Checked local links: 44; claim references: 14
+FAIL: Broken local link in README.md: reports/lint-stage1.txt
+PENDING: complete remaining ingests before making the teaching deck
+exit_code=1
+
+$ python3 scripts/lint_wiki.py --require-five
+Ingested distinct sources: 1/5
+Checked local links: 44; claim references: 14
+FAIL: Broken local link in README.md: reports/lint-stage1.txt
+FAIL: Readiness gate: fewer than five ingested distinct sources
+PENDING: complete remaining ingests before making the teaching deck
+exit_code=1

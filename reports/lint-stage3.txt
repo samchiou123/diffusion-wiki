@@ -1,0 +1,3 @@
+Ingested distinct sources: 5/5
+Checked local links: 161; claim references: 166
+PASS: structural checks; semantic fidelity not evaluated by this script

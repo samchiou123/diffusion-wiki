@@ -1,0 +1,6 @@
+Ingested distinct sources: 2/5
+Checked local links: 53; claim references: 22
+FAIL: Broken local link in wiki/sources/ddpm.md: ../comparisons/diffusion-methods.md
+PENDING: complete remaining ingests before making the teaching deck
+
+exit_code=1

@@ -1,0 +1,20 @@
+$ python3 scripts/check_deck.py
+PASS: 12 slides; 136 fields match frozen manuscript verbatim
+PASS: unique IDs, per-page claims, source sections, 3 self-check questions, 12 navigation options
+PASS: standalone CSS/JS, root index matches deck, 4 labeled teaching pixel charts
+LIMIT: structure checks do not exercise browser clicks, keyboard focus, or responsive layout
+
+
+exit_code=0
+
+$ node --check slides/deck-script.js
+
+
+exit_code=0
+
+$ node scripts/test_navigation.cjs
+PASS: 10 navigation-index cases, including first/last-page boundaries
+LIMIT: pure navigation logic only; no browser/DOM interaction was tested
+
+
+exit_code=0

@@ -1,0 +1,40 @@
+$ python3 scripts/lint_wiki.py --require-five --metadata-only
+LIMIT: metadata-only public package check; raw PDF presence and SHA-256 NOT verified
+Ingested distinct sources: 5/5
+Checked local links: 153; claim references: 166
+PASS: structural checks; semantic fidelity not evaluated by this script
+
+
+exit_code=0
+$ python3 scripts/check_outline.py
+S01: teaching pages 1, 3, 4, 5, 6, 7, 8, 11
+S02: teaching pages 8, 9, 11
+S03: teaching pages 3, 9
+S04: teaching pages 5, 10, 11
+S05: teaching pages 1, 2, 4, 7
+Planned pages: 12
+Outline state: user_approved
+PASS: planned page count, claim IDs, evidence cards and teaching-source coverage
+PENDING: independent semantic review, real-browser interaction and responsive checks
+
+
+exit_code=0
+$ python3 scripts/check_deck.py
+PASS: 12 slides; 136 fields match frozen manuscript verbatim
+PASS: unique IDs, per-page claims, source sections, 3 self-check questions, 12 navigation options
+PASS: standalone CSS/JS, root index matches deck, 4 labeled teaching pixel charts
+LIMIT: structure checks do not exercise browser clicks, keyboard focus, or responsive layout
+
+
+exit_code=0
+$ node --check slides/deck-script.js
+
+
+exit_code=0
+$ node scripts/test_navigation.cjs
+PASS: 10 navigation-index cases, including first/last-page boundaries
+LIMIT: pure navigation logic only; no browser/DOM interaction was tested
+
+
+exit_code=0
+STATUS: independent review skipped by user; actual browser checks not recorded; no GitHub deployment performed.

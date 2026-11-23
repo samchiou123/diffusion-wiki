@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/99f8fa4db333/output/diffusion-wiki/scripts/check_deck.py", line 54, in <module>
+    assert len([n for n in nodes if 'quiz' in n.attrs.get('class','').split()])==3
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+exit_code=1

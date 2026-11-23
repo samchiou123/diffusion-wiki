@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const code=fs.readFileSync(path.join(__dirname,'../slides/deck-script.js'),'utf8').split('(function(){')[0];
+const ctx={};vm.runInNewContext(code,ctx);
+const cases=[[0,'ArrowLeft',0],[11,'ArrowRight',11],[5,'Home',0],[5,'End',11],[2,'PageUp',1],[2,'PageDown',3],[8,'ArrowRight',9],[8,'ArrowLeft',7],[2,'Escape',2],[0,'ArrowRight',1]];
+for(const [start,key,wanted] of cases)assert.equal(ctx.nextSlideIndex(start,key,12),wanted);
+console.log('PASS: 10 navigation-index cases, including first/last-page boundaries');
+console.log('LIMIT: pure navigation logic only; no browser/DOM interaction was tested');

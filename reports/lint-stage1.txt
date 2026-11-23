@@ -1,0 +1,13 @@
+$ python3 scripts/lint_wiki.py
+Ingested distinct sources: 1/5
+Checked local links: 46; claim references: 14
+PASS: structural checks; semantic fidelity not evaluated by this script
+PENDING: complete remaining ingests before making the teaching deck
+exit_code=0
+
+$ python3 scripts/lint_wiki.py --require-five
+Ingested distinct sources: 1/5
+Checked local links: 46; claim references: 14
+FAIL: Readiness gate: fewer than five ingested distinct sources
+PENDING: complete remaining ingests before making the teaching deck
+exit_code=1
